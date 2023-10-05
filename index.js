@@ -1,7 +1,7 @@
 import express from 'express';
 const app = express();
 
-app.listen(4000, () => {
+app.listen(80, () => {
     console.log("Hello from EC2 app-server on port 4000");
 });
 
