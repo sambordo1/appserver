@@ -2,7 +2,8 @@ import express from 'express';
 
 const app = express();
 
-app.listen(4000, () => {
+// Explicitly specify IPv4 address (0.0.0.0) to listen on
+app.listen(4000, '0.0.0.0', () => {
     console.log("Server listening on port 4000");
 });
 
