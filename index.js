@@ -14,10 +14,10 @@ app.get('/api/app-color', (req, res) => {
     const color = req.query.color;
 
     if (color === 'BLUE') {
-        res.send('Returning blue');
+        res.send('APP SERVER BLUE');
     } else if (color === 'GREEN') {
-        res.send('Returning green');
+        res.send('APP SERVER GREEN');
     } else {
-        res.status(400).send('Invalid color');
+        res.status(400).send('Invalid deployment color');
     }
 });
