@@ -13,11 +13,15 @@ app.get('/', (req, res) => {
 app.get('/api/app-color', (req, res) => {
     const color = req.query.color;
 
+    let responseData = {};
+
     if (color === 'BLUE') {
-        res.send('APP SERVER BLUE');
+        responseData = { serverResponse: 'APP SERVER BLUE' };
     } else if (color === 'GREEN') {
-        res.send('APP SERVER GREEN');
+        responseData = { serverResponse: 'APP SERVER GREEN' };
     } else {
-        res.status(400).send('Invalid deployment color');
+        responseData = { error: 'Invalid deployment color' };
     }
+
+    res.json(responseData);
 });
